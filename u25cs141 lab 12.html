@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Student Portal</title>
+        <link rel="stylesheet" href="u25cs141 lab 12.css">
+    </head>
+    <body>
+
+        <div class="navbar">
+            <h1 id="heading">Student Portal</h1>
+        </div>
+
+        <div class="layout">
+
+            <div class="sidebar">
+                <button onclick="showPage('pageA')">Home</button>
+                <button onclick="showPage('pageC')">Task Board</button>
+                <button onclick="showPage('pageD')">Manage</button>
+                <button onclick="showPage('pageE')">Interaction</button>
+                <button onclick="showPage('pageF')">Keyboard</button>
+                <button onclick="showPage('pageG')">Attributes</button>
+
+                <hr>
+
+                <button onclick="changeTextColor()">Text Color</button>
+                <button onclick="changeBgColor()">Background</button>
+                <button onclick="increaseFont()">Font Size</button>
+                <button onclick="toggleHighlight()">Highlight</button>
+                <button onclick="resetStyle()">Reset</button>
+            </div>
+
+            <div class="content" id="portalBox">
+
+                <div id="pageA" class="page active">
+                    <div class="hero">
+                        <h1>Welcome to Student Portal 🚀</h1>
+                        <p>Your smart dashboard</p>
+
+                        <div class="input-group">
+                            <input type="text" id="studentName"
+                                placeholder="Enter your name">
+                            <button class="main-btn"
+                                onclick="welcomeUser()">Enter</button>
+                        </div>
+
+                        <p id="welcomeText"></p>
+                    </div>
+
+                    <div class="cards">
+                        <div class="card"
+                            onclick="showPage('pageC')">📋<h3>Task</h3></div>
+                        <div class="card"
+                            onclick="showPage('pageD')">⚙️<h3>Manage</h3></div>
+                        <div class="card"
+                            onclick="showPage('pageE')">🖱️<h3>Mouse</h3></div>
+                        <div class="card"
+                            onclick="showPage('pageF')">⌨️<h3>Keyboard</h3></div>
+                        <div class="card"
+                            onclick="showPage('pageG')">🖼️<h3>Attribute</h3></div>
+                    </div>
+                </div>
+
+                <div id="pageC" class="page">
+                    <h2>Task Board</h2>
+                    <div class="input-group">
+                        <input type="text" id="taskInput">
+                        <button class="main-btn"
+                            onclick="addTask()">Add</button>
+                    </div>
+                    <ul id="taskList"></ul>
+                </div>
+
+                <div id="pageD" class="page manage-section">
+                    <h2>Manage Content</h2>
+
+                    <input type="text" id="manageInput"
+                        placeholder="Enter message">
+
+                    <div class="btn-group">
+                        <button class="main-btn"
+                            onclick="insertBefore()">Before</button>
+                        <button class="main-btn"
+                            onclick="insertAfter()">After</button>
+                        <button class="main-btn"
+                            onclick="replaceContent()">Replace</button>
+                        <button class="main-btn"
+                            onclick="removeContent()">Remove</button>
+                    </div>
+
+                    <div id="manageOutput"></div>
+                </div>
+
+                <div id="pageE" class="page">
+                    <h2>Mouse Interaction</h2>
+                    <div id="interactionBox"
+                        onclick="handleClick()"
+                        ondblclick="handleDoubleClick()"
+                        onmouseover="handleMouseOver()"
+                        onmouseout="handleMouseOut()">Interact 😎</div>
+                </div>
+
+                <div id="pageF" class="page">
+                    <h2>Keyboard Zone</h2>
+                    <input type="text" id="keyInput">
+                    <p id="liveText"></p>
+                    <p id="enterText"></p>
+                    <p id="releaseText"></p>
+                </div>
+
+                <div id="pageG" class="page">
+                    <h2>Attribute Panel</h2>
+                    <img id="myImage" src="https://picsum.photos/200" alt="img">
+
+                    <div class="btn-group">
+                        <button class="main-btn"
+                            onclick="readProperty()">Property</button>
+                        <button class="main-btn"
+                            onclick="readAttribute()">Attribute</button>
+                        <button class="main-btn"
+                            onclick="changeAttribute()">Change</button>
+                        <button class="main-btn"
+                            onclick="removeAttribute()">Remove</button>
+                    </div>
+
+                    <p id="outputText"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="u25cs141 lab 12.js"></script>
+    </body>
+</html>

@@ -1,0 +1,272 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #141e30, #243b55, #1c1c3c, #2c3e50);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: white;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.navbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    font-size: 22px;
+}
+
+.layout {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+.sidebar {
+    width: 230px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 12px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    backdrop-filter: blur(10px);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 12px;
+    width: 260px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.sidebar button, .main-btn, .manage-section button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5, #00c6ff);
+    background-size: 300% 300%;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.4s;
+    box-shadow: 0 0 15px rgba(0,255,255,0.4);
+}
+
+.sidebar button:hover, .main-btn:hover, .manage-section button:hover {
+    transform: scale(1.12);
+    background-position: right center;
+    box-shadow: 0 0 25px rgba(0,255,255,0.9), 
+                0 0 50px rgba(255,0,255,0.7);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.task-section, .manage-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.manage-section input {
+    width: 300px;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.manage-section .btn-group {
+    gap: 15px;
+}
+
+.manage-section button {
+    min-width: 120px;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    background: rgba(255,255,255,0.1);
+    margin: 10px auto;
+    padding: 12px;
+    width: 260px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#taskList li:hover {
+    transform: scale(1.08);
+    background: rgba(255,255,255,0.2);
+}
+
+.highlight {
+    background: rgba(255,255,0,0.3);
+    color: black;
+}
+
+h1, h2 {
+    text-shadow: 0 0 10px rgba(0,255,255,0.6),
+                 0 0 20px rgba(255,0,255,0.4);
+}
+
+.hero {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0,255,255,0.7);
+}
+
+#interactionBox {
+    margin: 20px auto;
+    width: 250px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    color: white;
+    font-weight: bold;
+    transition: 0.4s;
+    box-shadow: 0 0 20px rgba(0,255,255,0.5);
+    cursor: pointer;
+}
+
+.keyboard-box {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 25px rgba(0,255,255,0.3);
+    text-align: center;
+    width: 350px;
+}
+
+.keyboard-box input {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.output-box p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#enterText {
+    color: #00ffcc;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+#releaseText {
+    color: #ffcc00;
+}
+
+.attr-box {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 25px rgba(0,255,255,0.3);
+    text-align: center;
+}
+
+#myImage {
+    width: 200px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.6);
+    transition: 0.3s;
+}
+
+#myImage:hover {
+    transform: scale(1.1);
+}
+
+.page {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
